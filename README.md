@@ -2,6 +2,8 @@
 
 CLI de **developer experience** para equipos de calidad, con dos capacidades que reducen el tiempo de feedback y mejoran la confiabilidad de la suite: **Test Impact Analysis** (correr solo los tests afectados por un cambio) y **detección de flakiness** (clasificar y priorizar tests inestables a partir del histórico de corridas).
 
+![CI](https://github.com/fercarballo/qa-insights/actions/workflows/ci.yml/badge.svg)
+
 ---
 
 ## Resumen ejecutivo
@@ -122,9 +124,25 @@ npm run typecheck
 
 ---
 
-## Contexto
+## La suite completa
 
-Parte de una serie de proyectos de automatización de calidad orientados a perfiles QA Automation y SDET, con foco en **tooling que multiplica al equipo**.
+Este repositorio forma parte de una suite de automatización de calidad que cubre el ciclo de testing de punta a punta, de los fundamentos a las prácticas propias de un rol SDET.
+
+**Fundamentos**
+
+1. [Framework E2E de UI](https://github.com/fercarballo/playwright-e2e-framework-saucedemo) — Playwright · Page Object Model
+2. [Testing de API](https://github.com/fercarballo/api-testing-framework-restful-booker) — contract testing con Zod
+3. [Pipeline CI/CD](https://github.com/fercarballo/qa-automation-cicd-pipeline) — GitHub Actions · quality gates
+4. [Estabilidad y flakiness](https://github.com/fercarballo/flakiness-hunting-playwright) — detección y erradicación
+5. [Regresión visual & contract testing](https://github.com/fercarballo/visual-and-contract-testing) — Playwright + Pact
+
+**Avanzado (SDET)**
+
+6. [Performance & load testing](https://github.com/fercarballo/performance-testing-k6) — k6 · thresholds como gate
+7. [Integración con dependencias reales](https://github.com/fercarballo/integration-testing-testcontainers) — Testcontainers · Postgres
+8. [DevSecOps](https://github.com/fercarballo/devsecops-pipeline) — SAST · SCA · DAST en el pipeline
+9. **Tooling interno de QA** — este repositorio
+10. [Evals de aplicaciones con IA](https://github.com/fercarballo/llm-evals-harness) — LLM testing
 
 ---
 
