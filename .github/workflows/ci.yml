@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+      - name: Instalar dependencias
+        run: npm ci || (sleep 10 && npm ci) || (sleep 20 && npm ci)
+      - name: Type-check
+        run: npm run typecheck
+      - name: Tests de la herramienta
+        run: npm test
+      - name: Demo — Test Impact Analysis
+        run: npm run demo:impact
+      - name: Demo — Detección de flakiness
+        run: npm run demo:flaky

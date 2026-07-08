@@ -1,0 +1,11 @@
+{
+  "run": 4,
+  "timestamp": "2026-07-04T03:00:00Z",
+  "tests": [
+    { "name": "login con credenciales validas", "status": "passed", "durationMs": 820 },
+    { "name": "checkout descuenta stock", "status": "passed", "durationMs": 2450 },
+    { "name": "busqueda devuelve resultados", "status": "passed", "durationMs": 1100 },
+    { "name": "el badge del carrito se actualiza", "status": "passed", "durationMs": 1500 },
+    { "name": "reporte de ventas exporta PDF", "status": "failed", "durationMs": 900 }
+  ]
+}
